@@ -1,0 +1,45 @@
+$color-background-first: rgb(24, 22, 22);
+$color-background-second: rgb(88, 84, 84);
+
+$game-item-width: 16rem;
+$game-item-height: $game-item-width * 2;
+
+:host {
+  .game-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient($color-background-second, $color-background-first);
+    width: $game-item-width;
+    height: $game-item-height;
+    border-radius: 2rem;
+    box-shadow: 17px 19px 24px -5px rgba(7, 7, 7, 0.57);
+
+    &::before,&::after {
+      content: '';
+      position: absolute;
+      border-radius: 2rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: $game-item-width;
+      height: $game-item-height;
+    }
+
+    &::before {
+      box-shadow: 9px 9px 11px -5px rgb(255 255 255 / 75%) inset;
+    }
+    &::after {
+      box-shadow: -5px -5px 11px -8px rgba(255, 255, 255, 0.7) inset;
+    }
+
+
+    &-center {
+      width: 80%;
+      border-radius: 6px;
+      margin: 0 auto;
+      flex-grow: 1;
+      background: linear-gradient(180.25deg, $color-background-first 14%, $color-background-second 100%);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<div class="half-container">
+
+  <div class="half-container-column left">
+    <div
+      *ngFor="let number of numbers"
+      class="game-point"
+    ></div>
+  </div>
+
+  <div class="half-container-column middle">
+    <div
+      *ngIf="!isEven"
+      class="game-point"
+    ></div>
+  </div>
+
+  <div class="half-container-column">
+    <div
+      *ngFor="let number of numbers"
+      class="game-point"
+    ></div>
+  </div>
+</div>

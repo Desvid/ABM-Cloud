@@ -1,0 +1,30 @@
+:host {
+  flex: 10;
+  padding: 2rem 1rem;
+
+  .half-container {
+    display: flex;
+    height: 100%;
+    &-column {
+      display: flex;
+      flex-grow: 1;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      &.middle {
+        justify-content: center;
+      }
+      &.left {
+        flex-direction: column-reverse;
+      }
+      .game-point {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        border: 1px solid #3a3a3a;
+        background: linear-gradient(341deg, rgb(255 255 255) 10%, rgb(64 64 64) 96%);
+      }
+    }
+  }
+}
